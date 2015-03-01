@@ -1,6 +1,6 @@
 # Web Project Workflows with Gulp.js, Git, and Browserify
 
-Learn how to generate a workflow that makes it easier to build your own websites, track and share project files, and leverage JavaScript and jQuery code libraries.
+How to generate a workflow that makes it easier to build your own websites, track and share project files, and leverage JavaScript and jQuery code libraries.
 
 **Topics include:**
 * Why workflow management?

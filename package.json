@@ -22,7 +22,7 @@
     "Sass"
   ],
   "license": "ISC",
-   "devDependencies": {
+  "devDependencies": {
     "gulp": "^3.6.2",
     "gulp-util": "^2.2.14"
   } 
