@@ -1,14 +1,15 @@
-# workflow-coffee-sass
+# Web Project Workflows with Gulp.js, Git, and Browserify
 
-# mkdir {builds,builds/development,builds/production,components,components/coffee,components/sass,components/scripts}
+Learn how to generate a workflow that makes it easier to build your own websites, track and share project files, and leverage JavaScript and jQuery code libraries.
 
-# cd components/scripts && 
-
-# cd components/sass && touch _base.scss _modules.scss _rclick.scss style.scss _mixins.scss _pixgrid.scss _variables.scss
-
-# echo "# workflow-coffee-sass" >> README.md
-# git init
-# git add README.md
-# git commit -m "first commit"
-# git remote add origin https://github.com/GarySwift/workflow-coffee-sass.git
-# git push -u origin master
+**Topics include:**
+* Why workflow management?
+* Processing tasks with gulp-coffee
+* Importing libraries with Browserify
+* Processing Sass and Compass
+* Issuing tasks in sequence
+* Watching changes to files
+* Adding static reloads
+* Setting up environment variables
+* Minifying HTML
+* Compressing images
