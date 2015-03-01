@@ -1,4 +1,4 @@
-var $, fill;
+var $, fill, log;
 
 $ = require('jquery');
 
@@ -7,3 +7,7 @@ $ = require('jquery');
 })('The most creative minds in Art');
 
 fill;
+
+(log = function() {
+  return console.log('Testing coffee');
+})();

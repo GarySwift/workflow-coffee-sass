@@ -1,12 +1,3 @@
-// var gulp = require('gulp'),
-//     gutil = require('gulp-util');
-
-// gulp.task('log', function() {
-//   gutil.log(gutil.colors.magenta('Workflows are awesome!!!'))
-// });
-
-// gulp.task('default', ['log']);
-
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     coffee = require('gulp-coffee'),
@@ -17,15 +8,16 @@ var gulp = require('gulp'),
 
 var coffeeSources = ['components/coffee/tagline.coffee'];
 var jsSources = [
-  'components/scripts/rclick.js',
-  'components/scripts/pixgrid.js',
-  'components/scripts/tagline.js',
-  'components/scripts/template.js'
+  'components/scripts/rclick.js', // Script to handle right-click event
+  'components/scripts/pixgrid.js', // Pix grid script
+  'components/scripts/tagline.js', // Contains jQuery declaration (Compiled from coffeescript)
+  'components/scripts/template.js' // Contains Mustache declaration
 ];
 var sassSources = ['components/sass/style.scss'];
 var htmlSources = ['builds/development/*.html'];
 var jsonSources = ['builds/development/js/*.json'];
 
+// Compile each coffeescript file into 'components/scripts/' <NAME OF FILE>.js eg. tagline.js
 gulp.task('coffee', function() {
   gulp.src(coffeeSources)
     .pipe(coffee({ bare: true })
@@ -33,10 +25,11 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest('components/scripts'))
 });
 
+//Concat all javascript files in 'components/scripts/' into one single file in 'builds/development/js/script.js'
 gulp.task('js', function() {
   gulp.src(jsSources)
-    .pipe(concat('script.js'))
-    .pipe(browserify())
+    .pipe(concat('script.js')) // Concat all js scripts
+    .pipe(browserify()) // Send concatenated script.js to browserify()
     .pipe(gulp.dest('builds/development/js'))
     .pipe(connect.reload())
 });
@@ -78,4 +71,8 @@ gulp.task('json', function() {
     .pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'json', 'coffee', 'js', 'compass', 'connect', 'watch']);
+gulp.task('log', function() {
+  gutil.log(gutil.colors.magenta('Workflows are awesome!!!'))
+});
+
+gulp.task('default', ['html', 'json', 'coffee', 'js', 'compass', 'connect', 'watch', 'log']);
