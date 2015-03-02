@@ -71,19 +71,15 @@ var pixgrid = function() {
         }, !1);
     }
 }();
-var $, fill, log;
+var $, fill;
 
 $ = require('jquery');
 
 (fill = function(item) {
   return $('.tagline').append("" + item);
-})('The most creative minds in Art');
+})('The very most creative minds in Art');
 
 fill;
-
-(log = function() {
-  return console.log('Testing coffee');
-})();
 
 $(function() {
   var Mustache = require('mustache');
